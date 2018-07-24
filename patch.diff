@@ -1,0 +1,1376 @@
+From ae88fcef694cca2013b7256882d62ada5d99c380 Mon Sep 17 00:00:00 2001
+From: Chris Chen <chiandeye@gmail.com>
+Date: Tue, 24 Jul 2018 21:59:34 +0800
+Subject: [PATCH] Add html, css
+
+---
+ README.txt    |   3 +
+ css/style.css | 446 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ index.html    | 179 +++++++++++++++++++++++
+ license.txt   |  16 +++
+ 4 files changed, 644 insertions(+)
+ create mode 100644 README.txt
+ create mode 100644 css/style.css
+ create mode 100644 index.html
+ create mode 100644 license.txt
+
+diff --git a/README.txt b/README.txt
+new file mode 100644
+index 0000000..5b845dc
+--- /dev/null
++++ b/README.txt
+@@ -0,0 +1,3 @@
++A Pen created at CodePen.io. You can find this one at https://codepen.io/chrisc0210/pen/QxdoaR.
++
++ 
+\ No newline at end of file
+diff --git a/css/style.css b/css/style.css
+new file mode 100644
+index 0000000..47c6185
+--- /dev/null
++++ b/css/style.css
+@@ -0,0 +1,446 @@
++* {
++  box-sizing: border-box;
++  font-family:Roboto,sans-serif,微軟正黑體;
++}
++
++.bg_navbar {
++  width: 100%;
++  height: 76px;
++  background-color: #f8bbd0;
++  display: flex;
++  justify-content: center;
++}
++
++.bg_navbar ul {
++  list-style: none;
++  /*   background-color: #999; */
++  text-align: center;
++  
++}
++
++.completed {
++  display: inline-flex;
++  justify-content: center;
++  /*   border: 1px solid black; */
++  height: 28px;
++  width: 220px;
++  text-align: center;
++  font-family: Roboto-Regular,微軟正黑體;
++  font-size: 24px;
++  color: #000000;
++  margin: 10px 0 0 0;
++  
++}
++
++.completed li{
++  display: block;
++  float: left;
++  text-align: center;
++  width: 25%;
++  height: 100%;
++  transition: all ease-in-out .2s;
++}
++
++/* li:hover {
++  border-bottom: 6px solid #FFFFFF;
++  vertical-align:sub;
++} */
++
++.completed a {
++  list-style: none;
++  color: #424242;
++  text-decoration: none;
++}
++
++.completed a:hover {
++  list-style: none;
++  color: #fff;
++  font-family: Roboto-Medium,微軟正黑體;
++}
++
++/* .bg_content{
++  border: 1px solid black;
++  height: 620px;
++  width: 519px;
++  background-color: #F2F2F2 100%;
++  display: flex;
++  margin-left: 202px;
++  margin-top: 22px;
++} */
++
++/* test only */
++.outter {
++/*   border: 1px solid black; */
++  width: 100%;
++}
++
++.box {
++/*   border: 1px solid black; */
++  width: 620px;
++  height: 600px;
++  background-color: #eeeeee;
++  border-radius: 6px;
++}
++
++.bg_title {
++  display: flex;
++}
++
++.card_title {
++  font-family: Roboto-Medium,微軟正黑體;
++  font-size: 24px;
++  color: #424242;
++
++  margin: 24px 0 0 0;
++}
++
++.card_title2 {
++  font-family: Roboto-Medium;
++  font-size: 24px;
++  color: #BDBDBD;
++  text-decoration:line-through;
++
++  margin: 24px 0 0 0;
++}
++
++.btn_checkbox {
++  width: 24px;
++  height: 24px;
++  border-radius: 4px;
++  /*   border: 1px solid black; */
++  background: #fff;
++
++  margin: 28px 16px 28px 32px;
++}
++
++.btn_checkbox:hover {
++  background: #F06292;
++}
++
++.rightbox {
++  display: inline-flex;
++  list-style: none;
++}
++
++.star {
++  width: 24px;
++  height: 24px;
++  /*   background: #7C4DFF; */
++  border-radius: 2px;
++
++  margin: 28px -32px 28px 200px;
++}
++
++.star:hover {
++  border: 1px solid transparent;
++}
++
++.star:active {
++  color: yellow;
++}
++
++.shape {
++  width: 24px;
++  height: 24px;
++  /*   background: #388E3C; */
++  border-radius: 2px;
++
++  margin: 28px 0px 28px 56px;
++}
++
++.shape:hover {
++  border: 1px solid transparent;
++}
++
++.border_btm {
++  border-bottom: 2px solid #c8c8c8;
++  /*   padding-top: 76px; */
++}
++
++.outter3 {
++  display: flex;
++}
++
++.outter3 .box {
++  margin: auto;
++  margin-top: 22px;
++  margin-bottom: 24px;
++}
++
++/* deadline start */
++.deadline_box{
++  display:flex;
++}
++.deadline {
++  font-family: Roboto-Medium,微軟正黑體;
++  font-size: 20px;
++  color: #424242;
++
++  padding: 24px 0 0 0;
++}
++.deadline_icon {
++  width: 20px;
++  height: 20px;
++/*   background: #388e3c; */
++  border-radius: 2px;
++
++  margin: 28px 16px 10px 76px;
++}
++
++.deadline_box2{
++  display:flex;
++}
++
++.day_box{
++  width: 162px;
++  height: 30px;
++  background-color: #fff;
++  border-radius: 2px;
++  
++  margin: 0 16px 0px 76px;
++  
++  text-align: center;
++  font-family: Roboto,微軟正黑體;
++  font-size: 14px;
++  color: #BDBDBD;
++  padding: 6px 0 0 0;
++}
++
++.time_box{
++  width: 162px;
++  height: 30px;
++  background-color: #fff;
++  border-radius: 2px;
++  
++  margin: 0 16px 0px 0px;
++  
++  text-align: center;
++  font-family: Roboto,微軟正黑體;
++  font-size: 14px;
++  color: #BDBDBD;
++  padding: 6px 0 0 0;
++}
++
++/*   file start */
++.file_box{
++  display: flex;
++}
++
++.file_icon{
++  width: 20px;
++  height: 20px;
++/*   background: #388e3c; */
++  border-radius: 2px;
++
++  margin: 28px 16px 10px 76px;
++  
++}
++
++.file {
++  font-family: Roboto-Medium,微軟正黑體;
++  font-size: 20px;
++  color: #424242;
++
++  padding: 24px 0 0 0;
++}
++
++.file_box2{
++  display: flex;
++}
++
++.file_add{
++  display: flex;
++  justify-content: center;
++  align-items: center;
++  
++  width: 48px;
++  height: 48px;
++  background: #F48FB1;
++  border-radius: 2px;
++
++  margin: 0px 16px 0px 76px;
++  
++  font-family: Roboto;
++  font-size: 40px;
++  color: #fff;
++  text-align: center;
++  line-height: 1;
++}
++
++.file_add:hover {
++  background: #F06292;
++}
++/* file end */
++/* comment start */
++.comment_box{
++  display: flex;
++}
++
++.comment_icon{
++  width: 20px;
++  height: 20px;
++/*   background: #388e3c; */
++  border-radius: 2px;
++
++  margin: 28px 16px 10px 76px;
++  
++}
++
++.comment {
++  font-family: Roboto-Medium,微軟正黑體;
++  font-size: 20px;
++  color: #424242;
++
++  padding: 24px 0 0 0;
++}
++
++.comment_box2{
++  display: flex;
++  width: 470px;
++  height: 120px;
++  background: #fff;
++  border-radius: 2px;
++
++  margin: 0px 16px 0px 76px;
++}
++
++.comment_add{  
++  text-align: left;
++  font-family: Roboto,微軟正黑體;
++  font-size: 14px;
++  color: #BDBDBD;
++  
++  margin: 10px 16px 0px 20px;
++}
++/* file end */
++/* click_btn start */
++.btn_bg{
++  display: flex;
++  justify-content: center;
++  
++  width: 620px;
++  background: #red;
++  border-radius: 0px 6px 6px 0px;
++
++  margin: 70px 0px 0px 0px;
++}
++
++.btn_cancle{
++  display: flex;
++  justify-content: center;
++  align-items: center;
++  
++  background: #FAFAFA; 
++  width: 320px;
++  height: 60px;
++  border-radius: 6px 0px 0px 6px;
++}
++
++.btn_cancle:hover{
++  border: 2px solid #F5F5F5;
++  background: #E57373; 
++}
++
++.btn_canclefont{
++  font-family: Roboto-Blood,微軟正黑體;
++  font-size: 24px;
++  color: #B71C1C;
++  text-align:inherit;
++}
++
++
++.btn_add{
++  display: flex;
++  justify-content: center;
++  align-items: center;
++  
++  background: #F06292;
++  width: 320px;
++  height: 60px;
++  border-radius: 0px 6px 6px 0px;
++}
++
++.btn_add:hover{
++  border: 2px solid #F8BBD0; 
++}
++
++
++.btn_addfont{
++  font-family: Roboto-Blood,微軟正黑體;
++  font-size: 24px;
++  color: #fff;
++  text-align:inherit;
++}
++/* click_btn end */
++
++/* box2 start */
++.outter2{
++  display: flex;
++  justify-content: center;
++/*   border: 1px solid black; */
++  width: 100%;
++  
++  padding:0px 0 8px 0;
++}
++
++.box2 {
++/*   border: 1px solid black; */
++  width: 620px;
++  height: 102px;
++  background-color: #FFF9C4;
++  border-radius: 6px;
++}
++/* box2 end */
++
++/* box3 start */
++.outter3{
++  display: flex;
++  justify-content: center;
++/*   border: 1px solid black; */
++  width: 100%;
++  
++  padding:0px 0 8px 0;
++}
++
++.box3 {
++/*   border: 1px solid black; */
++  width: 620px;
++  height: 102px;
++  background-color: #eeeeee;
++  border-radius: 6px;
++  font-family: Roboto-Blood,微軟正黑體;
++}
++/* box3 end */
++/* box4 start */
++.outter4{
++  display: flex;
++  justify-content: center;
++/*   border: 1px solid black; */
++  width: 100%;
++  
++  padding:0px 0 8px 0;
++}
++
++.box4 {
++/*   border: 1px solid black; */
++  width: 620px;
++  height: 76px;
++  background-color: #eeeeee;
++  border-radius: 6px;
++  font-family: Roboto-Blood,微軟正黑體;
++}
++/* box4 end */
++
++/* RWD */
++@media only screen and (max-width: 768px) {
++
++}
++
++@media only screen and (max-width: 480px) {
++
++}
++
++
++@media only screen and (max-width: 320px) {
++
++}
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..831c543
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,179 @@
++<!DOCTYPE html>
++<html lang="en" >
++
++<head>
++  <meta charset="UTF-8">
++  <title>No1.todolist</title>
++  
++  
++  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
++<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
++
++      <link rel="stylesheet" href="css/style.css">
++
++  
++</head>
++
++<body>
++
++  <div class="bg_navbar">
++  <ul>
++    <li class="completed"><a href="#">My Tasks</a></li>
++    <li class="completed"><a href="#">In Prograse</a></li>
++    <li class="completed"><a href="#">Completed</a></li>
++  </ul>
++</div>
++<!-- <div class="bg_content">
++  </div> -->
++
++<!-- test -->
++<div class="outter outter3 ">
++  <div class="box">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title">Type Something Here...</div>
++      <div class="rightbox">
++        <div>
++          <img class="star" src="https://image.flaticon.com/icons/svg/149/149220.svg">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++
++    <div class="border_btm"></div>
++
++    <!--   deadline start -->
++    <div class="deadline_box">
++      <div><img class="deadline_icon" src="https://image.flaticon.com/icons/svg/747/747310.svg"></div>
++      <div class="deadline">Deadline</div>
++    </div>
++    <div class="deadline_box2">
++      <div class="day_box">yyyy/mm/dd</div>
++      <div class="time_box">hh:mm</div>
++    </div>
++    <!--   deadline end  -->
++    <!--   file start -->
++    <div class="file_box">
++      <div><img src="https://image.flaticon.com/icons/svg/263/263103.svg" alt="file" class="file_icon"></div>
++      <div class="file">File</div>
++    </div>
++    <div class="file_box2">
++      <div class="file_add">+</div>
++    </div>
++    <!--   file end  -->
++    <!--   comment start -->
++    <div class="comment_box">
++      <div><img src="https://image.flaticon.com/icons/svg/263/263101.svg" class="comment_icon"></div>
++      <div class="comment">Comment</div>
++    </div>
++    <div class="comment_box2">
++      <div class="comment_add">Type Something......</div>
++    </div>
++    <!--   comment end  -->
++    <!--   click_btn start -->
++    <div class="btn_bg">
++      <div class="btn_cancle">
++        <div class="btn_canclefont">Cancel</div>
++      </div>
++      <div class="btn_add">
++        <div class="btn_addfont">Add Task</div>
++      </div>
++    </div>
++    <!--   click_btn end -->
++  </div>
++</div>
++<!-- box2 start -->
++<div class="outter2">
++  <div class="box2">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title">Type Something Here...</div>
++      <div class="rightbox">
++        <div><img class="star" src="https://image.flaticon.com/icons/png/512/148/148839.png">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++  </div>
++</div>
++<!-- box2 end -->
++<!-- box2 start -->
++<div class="outter2">
++  <div class="box2">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title">Type Something Here...</div>
++      <div class="rightbox">
++        <div><img class="star" src="https://image.flaticon.com/icons/png/512/148/148839.png">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++  </div>
++</div>
++<!-- box2 end -->
++<!-- box3 start -->
++<div class="outter3">
++  <div class="box3">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title">Type Something Here...</div>
++      <div class="rightbox">
++        <div><img class="star" src="https://image.flaticon.com/icons/svg/149/149220.svg">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++  </div>
++</div>
++<!-- box3 end -->
++<!-- box3 start -->
++<div class="outter3">
++  <div class="box3">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title">Type Something Here...</div>
++      <div class="rightbox">
++        <div><img class="star" src="https://image.flaticon.com/icons/svg/149/149220.svg">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++  </div>
++</div>
++<!-- box3 end -->
++<!-- box4 start -->
++<div class="outter4">
++  <div class="box4">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title2">Type Something Here...</div>
++      <div class="rightbox">
++        <div><img class="star" src="https://image.flaticon.com/icons/svg/149/149220.svg">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++  </div>
++</div>
++<!-- box4 end -->
++</div>
++</div>
++  
++  
++
++</body>
++
++</html>
+diff --git a/license.txt b/license.txt
+new file mode 100644
+index 0000000..b845527
+--- /dev/null
++++ b/license.txt
+@@ -0,0 +1,16 @@
++
++
++<!--
++Copyright (c) 2018 by Chris C. (https://codepen.io/chrisc0210/pen/QxdoaR)
++
++
++Fork of an original work by Chris C. (https://codepen.io/chrisc0210/pen/qKbQGE)
++
++
++
++Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
++-->
+-- 
+2.16.2
+
+From e93cc6b4567c032c8392dd5207c4941e8bda2696 Mon Sep 17 00:00:00 2001
+From: Chris Chen <chiandeye@gmail.com>
+Date: Tue, 24 Jul 2018 21:59:34 +0800
+Subject: [PATCH] https://chrisc0210.github.io/no1_todolist/
+
+---
+ README.txt    |   3 +
+ css/style.css | 446 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ index.html    | 179 +++++++++++++++++++++++
+ license.txt   |  16 +++
+ 4 files changed, 644 insertions(+)
+ create mode 100644 README.txt
+ create mode 100644 css/style.css
+ create mode 100644 index.html
+ create mode 100644 license.txt
+
+diff --git a/README.txt b/README.txt
+new file mode 100644
+index 0000000..5b845dc
+--- /dev/null
++++ b/README.txt
+@@ -0,0 +1,3 @@
++A Pen created at CodePen.io. You can find this one at https://codepen.io/chrisc0210/pen/QxdoaR.
++
++ 
+\ No newline at end of file
+diff --git a/css/style.css b/css/style.css
+new file mode 100644
+index 0000000..47c6185
+--- /dev/null
++++ b/css/style.css
+@@ -0,0 +1,446 @@
++* {
++  box-sizing: border-box;
++  font-family:Roboto,sans-serif,微軟正黑體;
++}
++
++.bg_navbar {
++  width: 100%;
++  height: 76px;
++  background-color: #f8bbd0;
++  display: flex;
++  justify-content: center;
++}
++
++.bg_navbar ul {
++  list-style: none;
++  /*   background-color: #999; */
++  text-align: center;
++  
++}
++
++.completed {
++  display: inline-flex;
++  justify-content: center;
++  /*   border: 1px solid black; */
++  height: 28px;
++  width: 220px;
++  text-align: center;
++  font-family: Roboto-Regular,微軟正黑體;
++  font-size: 24px;
++  color: #000000;
++  margin: 10px 0 0 0;
++  
++}
++
++.completed li{
++  display: block;
++  float: left;
++  text-align: center;
++  width: 25%;
++  height: 100%;
++  transition: all ease-in-out .2s;
++}
++
++/* li:hover {
++  border-bottom: 6px solid #FFFFFF;
++  vertical-align:sub;
++} */
++
++.completed a {
++  list-style: none;
++  color: #424242;
++  text-decoration: none;
++}
++
++.completed a:hover {
++  list-style: none;
++  color: #fff;
++  font-family: Roboto-Medium,微軟正黑體;
++}
++
++/* .bg_content{
++  border: 1px solid black;
++  height: 620px;
++  width: 519px;
++  background-color: #F2F2F2 100%;
++  display: flex;
++  margin-left: 202px;
++  margin-top: 22px;
++} */
++
++/* test only */
++.outter {
++/*   border: 1px solid black; */
++  width: 100%;
++}
++
++.box {
++/*   border: 1px solid black; */
++  width: 620px;
++  height: 600px;
++  background-color: #eeeeee;
++  border-radius: 6px;
++}
++
++.bg_title {
++  display: flex;
++}
++
++.card_title {
++  font-family: Roboto-Medium,微軟正黑體;
++  font-size: 24px;
++  color: #424242;
++
++  margin: 24px 0 0 0;
++}
++
++.card_title2 {
++  font-family: Roboto-Medium;
++  font-size: 24px;
++  color: #BDBDBD;
++  text-decoration:line-through;
++
++  margin: 24px 0 0 0;
++}
++
++.btn_checkbox {
++  width: 24px;
++  height: 24px;
++  border-radius: 4px;
++  /*   border: 1px solid black; */
++  background: #fff;
++
++  margin: 28px 16px 28px 32px;
++}
++
++.btn_checkbox:hover {
++  background: #F06292;
++}
++
++.rightbox {
++  display: inline-flex;
++  list-style: none;
++}
++
++.star {
++  width: 24px;
++  height: 24px;
++  /*   background: #7C4DFF; */
++  border-radius: 2px;
++
++  margin: 28px -32px 28px 200px;
++}
++
++.star:hover {
++  border: 1px solid transparent;
++}
++
++.star:active {
++  color: yellow;
++}
++
++.shape {
++  width: 24px;
++  height: 24px;
++  /*   background: #388E3C; */
++  border-radius: 2px;
++
++  margin: 28px 0px 28px 56px;
++}
++
++.shape:hover {
++  border: 1px solid transparent;
++}
++
++.border_btm {
++  border-bottom: 2px solid #c8c8c8;
++  /*   padding-top: 76px; */
++}
++
++.outter3 {
++  display: flex;
++}
++
++.outter3 .box {
++  margin: auto;
++  margin-top: 22px;
++  margin-bottom: 24px;
++}
++
++/* deadline start */
++.deadline_box{
++  display:flex;
++}
++.deadline {
++  font-family: Roboto-Medium,微軟正黑體;
++  font-size: 20px;
++  color: #424242;
++
++  padding: 24px 0 0 0;
++}
++.deadline_icon {
++  width: 20px;
++  height: 20px;
++/*   background: #388e3c; */
++  border-radius: 2px;
++
++  margin: 28px 16px 10px 76px;
++}
++
++.deadline_box2{
++  display:flex;
++}
++
++.day_box{
++  width: 162px;
++  height: 30px;
++  background-color: #fff;
++  border-radius: 2px;
++  
++  margin: 0 16px 0px 76px;
++  
++  text-align: center;
++  font-family: Roboto,微軟正黑體;
++  font-size: 14px;
++  color: #BDBDBD;
++  padding: 6px 0 0 0;
++}
++
++.time_box{
++  width: 162px;
++  height: 30px;
++  background-color: #fff;
++  border-radius: 2px;
++  
++  margin: 0 16px 0px 0px;
++  
++  text-align: center;
++  font-family: Roboto,微軟正黑體;
++  font-size: 14px;
++  color: #BDBDBD;
++  padding: 6px 0 0 0;
++}
++
++/*   file start */
++.file_box{
++  display: flex;
++}
++
++.file_icon{
++  width: 20px;
++  height: 20px;
++/*   background: #388e3c; */
++  border-radius: 2px;
++
++  margin: 28px 16px 10px 76px;
++  
++}
++
++.file {
++  font-family: Roboto-Medium,微軟正黑體;
++  font-size: 20px;
++  color: #424242;
++
++  padding: 24px 0 0 0;
++}
++
++.file_box2{
++  display: flex;
++}
++
++.file_add{
++  display: flex;
++  justify-content: center;
++  align-items: center;
++  
++  width: 48px;
++  height: 48px;
++  background: #F48FB1;
++  border-radius: 2px;
++
++  margin: 0px 16px 0px 76px;
++  
++  font-family: Roboto;
++  font-size: 40px;
++  color: #fff;
++  text-align: center;
++  line-height: 1;
++}
++
++.file_add:hover {
++  background: #F06292;
++}
++/* file end */
++/* comment start */
++.comment_box{
++  display: flex;
++}
++
++.comment_icon{
++  width: 20px;
++  height: 20px;
++/*   background: #388e3c; */
++  border-radius: 2px;
++
++  margin: 28px 16px 10px 76px;
++  
++}
++
++.comment {
++  font-family: Roboto-Medium,微軟正黑體;
++  font-size: 20px;
++  color: #424242;
++
++  padding: 24px 0 0 0;
++}
++
++.comment_box2{
++  display: flex;
++  width: 470px;
++  height: 120px;
++  background: #fff;
++  border-radius: 2px;
++
++  margin: 0px 16px 0px 76px;
++}
++
++.comment_add{  
++  text-align: left;
++  font-family: Roboto,微軟正黑體;
++  font-size: 14px;
++  color: #BDBDBD;
++  
++  margin: 10px 16px 0px 20px;
++}
++/* file end */
++/* click_btn start */
++.btn_bg{
++  display: flex;
++  justify-content: center;
++  
++  width: 620px;
++  background: #red;
++  border-radius: 0px 6px 6px 0px;
++
++  margin: 70px 0px 0px 0px;
++}
++
++.btn_cancle{
++  display: flex;
++  justify-content: center;
++  align-items: center;
++  
++  background: #FAFAFA; 
++  width: 320px;
++  height: 60px;
++  border-radius: 6px 0px 0px 6px;
++}
++
++.btn_cancle:hover{
++  border: 2px solid #F5F5F5;
++  background: #E57373; 
++}
++
++.btn_canclefont{
++  font-family: Roboto-Blood,微軟正黑體;
++  font-size: 24px;
++  color: #B71C1C;
++  text-align:inherit;
++}
++
++
++.btn_add{
++  display: flex;
++  justify-content: center;
++  align-items: center;
++  
++  background: #F06292;
++  width: 320px;
++  height: 60px;
++  border-radius: 0px 6px 6px 0px;
++}
++
++.btn_add:hover{
++  border: 2px solid #F8BBD0; 
++}
++
++
++.btn_addfont{
++  font-family: Roboto-Blood,微軟正黑體;
++  font-size: 24px;
++  color: #fff;
++  text-align:inherit;
++}
++/* click_btn end */
++
++/* box2 start */
++.outter2{
++  display: flex;
++  justify-content: center;
++/*   border: 1px solid black; */
++  width: 100%;
++  
++  padding:0px 0 8px 0;
++}
++
++.box2 {
++/*   border: 1px solid black; */
++  width: 620px;
++  height: 102px;
++  background-color: #FFF9C4;
++  border-radius: 6px;
++}
++/* box2 end */
++
++/* box3 start */
++.outter3{
++  display: flex;
++  justify-content: center;
++/*   border: 1px solid black; */
++  width: 100%;
++  
++  padding:0px 0 8px 0;
++}
++
++.box3 {
++/*   border: 1px solid black; */
++  width: 620px;
++  height: 102px;
++  background-color: #eeeeee;
++  border-radius: 6px;
++  font-family: Roboto-Blood,微軟正黑體;
++}
++/* box3 end */
++/* box4 start */
++.outter4{
++  display: flex;
++  justify-content: center;
++/*   border: 1px solid black; */
++  width: 100%;
++  
++  padding:0px 0 8px 0;
++}
++
++.box4 {
++/*   border: 1px solid black; */
++  width: 620px;
++  height: 76px;
++  background-color: #eeeeee;
++  border-radius: 6px;
++  font-family: Roboto-Blood,微軟正黑體;
++}
++/* box4 end */
++
++/* RWD */
++@media only screen and (max-width: 768px) {
++
++}
++
++@media only screen and (max-width: 480px) {
++
++}
++
++
++@media only screen and (max-width: 320px) {
++
++}
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..831c543
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,179 @@
++<!DOCTYPE html>
++<html lang="en" >
++
++<head>
++  <meta charset="UTF-8">
++  <title>No1.todolist</title>
++  
++  
++  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
++<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
++
++      <link rel="stylesheet" href="css/style.css">
++
++  
++</head>
++
++<body>
++
++  <div class="bg_navbar">
++  <ul>
++    <li class="completed"><a href="#">My Tasks</a></li>
++    <li class="completed"><a href="#">In Prograse</a></li>
++    <li class="completed"><a href="#">Completed</a></li>
++  </ul>
++</div>
++<!-- <div class="bg_content">
++  </div> -->
++
++<!-- test -->
++<div class="outter outter3 ">
++  <div class="box">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title">Type Something Here...</div>
++      <div class="rightbox">
++        <div>
++          <img class="star" src="https://image.flaticon.com/icons/svg/149/149220.svg">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++
++    <div class="border_btm"></div>
++
++    <!--   deadline start -->
++    <div class="deadline_box">
++      <div><img class="deadline_icon" src="https://image.flaticon.com/icons/svg/747/747310.svg"></div>
++      <div class="deadline">Deadline</div>
++    </div>
++    <div class="deadline_box2">
++      <div class="day_box">yyyy/mm/dd</div>
++      <div class="time_box">hh:mm</div>
++    </div>
++    <!--   deadline end  -->
++    <!--   file start -->
++    <div class="file_box">
++      <div><img src="https://image.flaticon.com/icons/svg/263/263103.svg" alt="file" class="file_icon"></div>
++      <div class="file">File</div>
++    </div>
++    <div class="file_box2">
++      <div class="file_add">+</div>
++    </div>
++    <!--   file end  -->
++    <!--   comment start -->
++    <div class="comment_box">
++      <div><img src="https://image.flaticon.com/icons/svg/263/263101.svg" class="comment_icon"></div>
++      <div class="comment">Comment</div>
++    </div>
++    <div class="comment_box2">
++      <div class="comment_add">Type Something......</div>
++    </div>
++    <!--   comment end  -->
++    <!--   click_btn start -->
++    <div class="btn_bg">
++      <div class="btn_cancle">
++        <div class="btn_canclefont">Cancel</div>
++      </div>
++      <div class="btn_add">
++        <div class="btn_addfont">Add Task</div>
++      </div>
++    </div>
++    <!--   click_btn end -->
++  </div>
++</div>
++<!-- box2 start -->
++<div class="outter2">
++  <div class="box2">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title">Type Something Here...</div>
++      <div class="rightbox">
++        <div><img class="star" src="https://image.flaticon.com/icons/png/512/148/148839.png">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++  </div>
++</div>
++<!-- box2 end -->
++<!-- box2 start -->
++<div class="outter2">
++  <div class="box2">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title">Type Something Here...</div>
++      <div class="rightbox">
++        <div><img class="star" src="https://image.flaticon.com/icons/png/512/148/148839.png">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++  </div>
++</div>
++<!-- box2 end -->
++<!-- box3 start -->
++<div class="outter3">
++  <div class="box3">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title">Type Something Here...</div>
++      <div class="rightbox">
++        <div><img class="star" src="https://image.flaticon.com/icons/svg/149/149220.svg">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++  </div>
++</div>
++<!-- box3 end -->
++<!-- box3 start -->
++<div class="outter3">
++  <div class="box3">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title">Type Something Here...</div>
++      <div class="rightbox">
++        <div><img class="star" src="https://image.flaticon.com/icons/svg/149/149220.svg">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++  </div>
++</div>
++<!-- box3 end -->
++<!-- box4 start -->
++<div class="outter4">
++  <div class="box4">
++    <div class="bg_title">
++      <div class="btn_checkbox">
++      </div>
++      <div class="card_title2">Type Something Here...</div>
++      <div class="rightbox">
++        <div><img class="star" src="https://image.flaticon.com/icons/svg/149/149220.svg">
++        </div>
++        <div><img class="shape" src="https://image.flaticon.com/icons/svg/69/69455.svg">
++        </div>
++      </div>
++    </div>
++  </div>
++</div>
++<!-- box4 end -->
++</div>
++</div>
++  
++  
++
++</body>
++
++</html>
+diff --git a/license.txt b/license.txt
+new file mode 100644
+index 0000000..b845527
+--- /dev/null
++++ b/license.txt
+@@ -0,0 +1,16 @@
++
++
++<!--
++Copyright (c) 2018 by Chris C. (https://codepen.io/chrisc0210/pen/QxdoaR)
++
++
++Fork of an original work by Chris C. (https://codepen.io/chrisc0210/pen/qKbQGE)
++
++
++
++Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
++-->
+-- 
+2.16.2
+
